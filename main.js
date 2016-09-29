@@ -11,6 +11,10 @@ var itemTotal = items.reduce(function(total, item){
 // of items in the array.
 console.log('The average price is: ' + (itemTotal/items.length).toFixed(2) );
 
-
-
+// Question two.
+var distance = items.map(function(list, index){
+  //console.log(list.title);
+  return list.title;
+});
+console.log(distance);
 })();
