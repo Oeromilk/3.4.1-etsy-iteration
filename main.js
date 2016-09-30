@@ -33,8 +33,10 @@ currency.map(function(item){
   console.log(item.title + ' costs ' + item.price);
 });
 
-// Question 4.
-
+/* Question 4.
+   Use the filter function to get the items that contain wood in their materials
+   section.
+*/
 var woodenItems = items.filter(function(item){
   return item.materials.includes('wood');
 });
@@ -43,5 +45,23 @@ woodenItems.map(function(item){
   console.log(item.title + ' is made of wood');
 });
 
+// Question 5
+// Using filter to capture the items where the material is greater or equal to 8
+var eightItems = items.filter(function(item){
+  return item.materials.length >= 8;
+});
+
+//Using map here to just show the title and materials of the items
+eightItems.map(function(item){
+  console.log(item.title + ':');
+  console.log(item.materials);
+  return;
+});
+
+var selfMade = items.filter(function(item){
+    return item.who_made.includes('i_did');
+});
+
+console.log(selfMade.length + ' items were made by their sellers.');
 
 })();
